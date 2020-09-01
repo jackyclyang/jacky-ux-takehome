@@ -81,11 +81,11 @@ export default function EventList({
           >
             <h2>{p.name}</h2>
             <InfoBar>
-              <Avatar>
+              <div>
                 {peopleToShow.map((person) => (
-                  <img alt="user specified self image" src={person.img} />
+                  <Avatar alt="user specified self image" src={person.img} />
                 ))}
-              </Avatar>
+              </div>
               <MinorText>
                 + {p.people.length - peopleToShow.length} people
               </MinorText>
