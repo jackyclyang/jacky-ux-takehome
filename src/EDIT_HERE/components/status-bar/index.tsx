@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import _ from "lodash";
 
 import ComputationIcon from "./ComputationIcon";
 import BiologicalIcon from "./BiologicalIcon";
