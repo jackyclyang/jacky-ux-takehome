@@ -13,7 +13,6 @@ type Props = {
 export default function Timeline(
   {
     parties = [],
-    selectedEventId,
     selectEventId,
     jobs = [],
     social
