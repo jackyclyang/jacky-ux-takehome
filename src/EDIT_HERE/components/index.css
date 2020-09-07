@@ -1,0 +1,39 @@
+
+.tabs {
+  background-color: #222;
+  margin: 4px;
+}
+
+.tab-links {
+  background-color: inherit;
+  color:white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 16px;
+  transition: 0.3s;
+  font-size: 16px;
+  border-radius: 0;
+}
+
+.tab-links:hover {
+  background-color: rgb(57, 57, 57);
+}
+
+.tab-links.active {
+  background-color: rgb(84, 92, 100);
+}
+
+.sort-form{
+  padding: 6px;
+  background-color: #222;
+  font-size: 16px;
+  margin: 4px ;
+}
+
+select{
+  background-color: #222;
+  border: 0px;
+  color:white;
+}

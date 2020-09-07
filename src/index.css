@@ -25,3 +25,12 @@ code {
   display: flex;
   justify-content: center;
 }
+
+button{
+  padding: 8px 20px;
+  border-radius: 20px;
+  border: 0px;
+  margin: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-
+import './index.css'
 import data from "../data";
 
 import Donut from "./Donut";
@@ -42,6 +42,9 @@ const LeftPanel = styled.section`
 
 const EditThisComponent = () => {
   const [selectedEventId, selectEventId] = useState();
+  const [events, setEvents] = useState()
+  const [jobs, setJobs] = useState()
+  const [social, setSocial] = useState()
 
   return (
     <Wrapper>
@@ -53,20 +56,38 @@ const EditThisComponent = () => {
         />
         <Donut
           parties={data.parties}
+          jobs={data.jobs}
+          social={social}
           width={520}
           height={520}
           currentArc={data.currentArc}
           currentRadius={data.currentRadius}
           selectedEventId={selectedEventId}
+          selectEventId={(id: string) =>
+            selectEventId(id === selectedEventId ? null : id)}
         />
-        <Timeline />
+        <Timeline
+          parties={data.parties}
+          jobs={data.jobs}
+          social={social}
+          selectedEventId={selectedEventId}
+          selectEventId={(id: string) =>
+            selectEventId(id === selectedEventId ? null : id)}
+        />
+
       </LeftPanel>
+
       <EventList
         selectedEventId={selectedEventId}
         selectEventId={(id: string) =>
           selectEventId(id === selectedEventId ? null : id)
         }
         events={data.parties}
+        setEvents={setEvents}
+        jobs={data.jobs}
+        setJobs={setJobs}
+        social={social}
+        setSocial={setSocial}
       />
     </Wrapper>
   );
